@@ -1,0 +1,491 @@
+@import "tailwindcss";
+
+:root {
+  /* Bento Market — light world */
+  --background: #ffffff;
+  --foreground: #0d0d0d;
+
+  /* Surface system — overridden to dark by DashboardShell */
+  --surface: #ffffff;
+  --surface-2: #f4f4f4;
+  --surface-3: #0d0d0d;
+  --line: rgb(13 13 13 / 0.09);
+  --line-strong: rgb(13 13 13 / 0.18);
+  --muted: #5c5c5f;
+
+  /* Semantic text colors — per-surface */
+  --ok: #15803d;
+  --ok-tint: rgb(21 128 61 / 0.12);
+  --err: #b91c1c;
+  --err-tint: rgb(185 28 28 / 0.1);
+  --warn: #87ab00;
+  --warn-tint: rgb(135 171 0 / 0.14);
+  --info: #1d4ed8;
+  --info-tint: rgb(29 78 216 / 0.1);
+  --live: #87ab00;
+
+  /* Seven-segment digits */
+  --seg-on: #0d0d0d;
+  --seg-off: #e5e5e4;
+
+  /* Rating star */
+  --star: #0d0d0d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), ui-monospace, "SFMono-Regular", monospace;
+
+  /* Paper / ink / smoke */
+  --color-paper: #ffffff;
+  --color-ink: #0d0d0d;
+  --color-smoke-50: #fafaf8;
+  --color-smoke-100: #f4f4f4;
+  --color-smoke-200: #eaeae8;
+  --color-smoke-300: #dcdcd9;
+
+  /* Primary — electric lime */
+  --color-primary-100: #f6ffd9;
+  --color-primary-200: #efffb8;
+  --color-primary-300: #e3ff80;
+  --color-primary-400: #d7ff47;
+  --color-primary-500: #c6ff00;
+  --color-primary-600: #a9d800;
+  --color-primary-700: #87ab00;
+  --color-primary-800: #667f00;
+  --color-primary-900: #475900;
+
+  /* Ground — absolute blacks (dark console dashboards) */
+  --color-dark-50: #1c1c1e;
+  --color-dark-100: #161618;
+  --color-dark-200: #121214;
+  --color-dark-300: #0e0e10;
+  --color-dark-400: #0b0b0d;
+  --color-dark-500: #09090b;
+  --color-dark-600: #08080a;
+  --color-dark-700: #070708;
+  --color-dark-800: #060607;
+  --color-dark-900: #050506;
+
+  /* Accent — aliases lime */
+  --color-accent-300: #e3ff80;
+  --color-accent-400: #d7ff47;
+  --color-accent-500: #c6ff00;
+  --color-accent-600: #a9d800;
+
+  /* Success / danger / info — readable on white */
+  --color-success-100: #eafaf0;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+  --color-danger-100: #fdecec;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+  --color-info-100: #eaf3ff;
+  --color-info-500: #3b82f6;
+  --color-info-600: #2563eb;
+  --color-info-700: #1d4ed8;
+
+  /* Shadows — soft neutral elevation */
+  --shadow-card: 0 1px 2px rgb(13 13 13 / 0.04), 0 8px 24px rgb(13 13 13 / 0.07);
+  --shadow-hover: 0 2px 4px rgb(13 13 13 / 0.06), 0 20px 44px rgb(13 13 13 / 0.14);
+  --shadow-overlay: 0 24px 60px rgb(13 13 13 / 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #c6ff00;
+  color: #0d0d0d;
+}
+
+/* ================================================================== */
+/* Bento Market motion vocabulary                                      */
+/* ================================================================== */
+
+/* Marquee ticker */
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Logo shape-shift on load */
+@keyframes logo-morph {
+  0% { border-radius: 2px; transform: rotate(0deg) scale(0.6); }
+  45% { border-radius: 9999px; transform: rotate(180deg) scale(1.05); }
+  70% { border-radius: 4px; transform: rotate(320deg) scale(0.92); }
+  100% { border-radius: 6px; transform: rotate(360deg) scale(1); }
+}
+
+/* Price pop — spring-bounce on card hover */
+@keyframes price-pop {
+  0% { transform: scale(0.72); }
+  55% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* Flash module glow when time runs low */
+@keyframes glow-low {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(198 255 0 / 0.55); }
+  50% { box-shadow: 0 0 0 14px rgb(198 255 0 / 0); }
+}
+
+/* Gentle float for hero mini-tiles */
+@keyframes tile-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Card deal-in with stagger */
+@keyframes deal-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Staggered fade-up reveal (driven by .reveal / .revealed) */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading shimmer on smoke */
+@keyframes shimmer-sweep {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+/* Count-up dot blink */
+@keyframes blink-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+/* Vendor carousel progress bar */
+@keyframes flash-progress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* ================================================================== */
+/* Utilities                                                           */
+/* ================================================================== */
+
+/* Spring hover — scale 1.02 + lift with overshoot, no layout shift.
+   Carries the full transition so elements must NOT also use
+   transition-colors / transition-all (they would fight this one). */
+@utility spring-lift {
+  transition:
+    transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background-color 0.3s ease;
+  &:hover {
+    transform: translateY(-6px) scale(1.02);
+  }
+}
+
+/* Scroll reveal — pair with .revealed */
+@utility reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--rv-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+@utility revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Black/lime hazard band (urgent modules) */
+@utility bento-stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    #0d0d0d 0 10px,
+    #c6ff00 10px 20px
+  );
+  animation: chevron-crawl 0.9s linear infinite;
+}
+
+@keyframes chevron-crawl {
+  from { background-position: 0 0; }
+  to { background-position: 28px 0; }
+}
+
+/* Bento panel — white tile with lime corner ticks */
+@utility bento-panel {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border: 1.5px solid #c6ff00;
+    pointer-events: none;
+  }
+  &::before {
+    top: -1px;
+    left: -1px;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 14px 0 0 0;
+  }
+  &::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: 0;
+    border-top: 0;
+    border-radius: 0 0 14px 0;
+  }
+}
+
+/* Ink tile — bold black module */
+@utility bento-ink {
+  background: #0d0d0d;
+  color: #ffffff;
+  border: 1px solid #0d0d0d;
+}
+
+/* Lime tile — the one saturated accent */
+@utility bento-lime {
+  background: #c6ff00;
+  color: #0d0d0d;
+}
+
+/* Marquee ticker track (duplicate content, loop -50%) */
+@utility ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 30s linear infinite;
+}
+
+/* Price pop trigger — parent hover drives child animation */
+@utility price-pop {
+  animation: price-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Low-time flash glow */
+@utility glow-low {
+  animation: glow-low 1.6s ease-out infinite;
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+/* ================================================================== */
+/* Kept for the dark console dashboards                                */
+/* ================================================================== */
+
+@keyframes scan-drift {
+  from { background-position: 0 0; }
+  to { background-position: 0 8px; }
+}
+
+@keyframes led-blink {
+  0%, 55% { opacity: 1; }
+  60%, 100% { opacity: 0.25; }
+}
+
+@keyframes led-pulse {
+  0%, 100% { box-shadow: 0 0 4px 1px rgb(183 255 0 / 0.5); }
+  50% { box-shadow: 0 0 12px 3px rgb(183 255 0 / 0.8); }
+}
+
+@keyframes radar-sweep {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+@keyframes phosphor-flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.82; }
+  94% { opacity: 1; }
+  97% { opacity: 0.9; }
+  98% { opacity: 1; }
+}
+
+/* Operator grid backdrop (dashboards) */
+@utility grid-bg {
+  background-image:
+    linear-gradient(rgb(255 122 0 / 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 122 0 / 0.055) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* Fine phosphor scanlines over a dark panel */
+@utility scanlines {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      0deg,
+      rgb(0 0 0 / 0.22) 0 1px,
+      transparent 1px 3px
+    );
+    animation: scan-drift 0.8s steps(4) infinite;
+  }
+}
+
+/* Hazard chevron band (dashboards) */
+@utility hazard {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgb(255 122 0 / 0.9) 0 10px,
+    rgb(5 5 6 / 0.9) 10px 20px
+  );
+  animation: chevron-crawl 0.9s linear infinite;
+}
+
+@utility led-live {
+  background: #b7ff00;
+  animation: led-blink 2s steps(1) infinite;
+  box-shadow: 0 0 6px 1px rgb(183 255 0 / 0.6);
+}
+
+@utility led-alert {
+  background: #ff4141;
+  animation: led-blink 1.2s steps(1) infinite;
+  box-shadow: 0 0 6px 1px rgb(255 65 65 / 0.6);
+}
+
+@utility led-idle {
+  background: #4d4d52;
+  box-shadow: 0 0 4px 1px rgb(77 77 82 / 0.4);
+}
+
+/* Framed operator panel with corner ticks */
+@utility panel-frame {
+  position: relative;
+  border: 1px solid rgb(255 122 0 / 0.22);
+  border-radius: 10px;
+  background: rgb(9 9 11 / 0.85);
+  box-shadow: var(--shadow-card);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgb(255 122 0 / 0.55);
+    pointer-events: none;
+  }
+  &::before {
+    top: -1px;
+    left: -1px;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 10px 0 0 0;
+  }
+  &::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: 0;
+    border-top: 0;
+    border-radius: 0 0 10px 0;
+  }
+}
+
+/* Seven-segment digit glow */
+@utility seven-seg {
+  font-family: var(--font-optr), ui-monospace, monospace;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 6px rgb(198 255 0 / 0.4), 0 0 18px rgb(198 255 0 / 0.15);
+  animation: phosphor-flicker 6s linear infinite;
+}
+
+@utility glass {
+  background: rgb(8 8 10 / 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 0.08);
+}
+
+@utility glass-dark {
+  background: rgb(5 5 6 / 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Thin scrollbar for app shells */
+.app-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255 122 0 / 0.35) transparent;
+}
+.app-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.app-scroll::-webkit-scrollbar-thumb {
+  background: rgb(255 122 0 / 0.35);
+  border-radius: 9999px;
+}
+.app-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Recharts tooltip — ink chip on light cards */
+.recharts-default-tooltip {
+  border-radius: 8px !important;
+  border: 1px solid rgb(13 13 13 / 0.12) !important;
+  background: rgb(255 255 255 / 0.96) !important;
+  box-shadow: 0 12px 32px rgb(13 13 13 / 0.14);
+  font-size: 13px;
+  color: #0d0d0d;
+}
+
+/* Hide number input spinners */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* ---------- Accessibility: motion off ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+  }
+}

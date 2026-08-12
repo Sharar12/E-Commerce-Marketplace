@@ -1,0 +1,186 @@
+{
+  "title": "Choose the visual world",
+  "question": "16 extreme-modern worlds for the marketplace. The roll assigned Factory Floor; all 16 are on the table. Pick the one to build, or type a steer.",
+  "options": [
+    {
+      "id": "factory-floor",
+      "label": "Factory Floor",
+      "kicker": "THE ROLL",
+      "lineage": "garment-factory production control boards",
+      "thesis": "The whole marketplace as a production floor: every order a numbered lot, every claim a stamped inspection.",
+      "palette": ["#0f0f0f", "#ece9e2", "#ffb000", "#00b368", "#e02020"],
+      "materials": ["thermal waybill paper", "rubber stamps", "carbon forms", "hairline rules"],
+      "viewport": "A full-bleed order board: ruled lots, mono numerals, a dispatch ticker, an amber flash-sale countdown stamped QC-PASS.",
+      "case": "The roll's assignment. Every trust claim becomes a stamped inspection — fit, delivery, refund.",
+      "risk": "Industrial-cold if the stamps and forms don't carry the confidence moment."
+    },
+    {
+      "id": "ticker-floor",
+      "label": "Ticker Floor",
+      "lineage": "Dhaka Stock Exchange trading boards",
+      "thesis": "The market as a live price board: every product a listed lot, every deal a tick.",
+      "palette": ["#0a0a0a", "#00c853", "#ff1744", "#f5f5f5", "#ffb000"],
+      "materials": ["LED ticker tape", "price ladders", "tabular numerals"],
+      "viewport": "A scrolling deal ticker up top, a green/red price ladder as the catalog, flash sales as closing auctions.",
+      "case": "Money-language the audience already trusts; delivery becomes a settlement time.",
+      "risk": "Reads like an exchange, not a shop — buying must stay the obvious move."
+    },
+    {
+      "id": "money-terminal",
+      "label": "Money Terminal",
+      "lineage": "bKash/Nagad cash-in, cash-out screens",
+      "thesis": "The checkout as a money terminal — the trust the audience already holds in their hands daily.",
+      "palette": ["#121212", "#00d26a", "#f8f8f6", "#ff5a5f"],
+      "materials": ["PIN pads", "thermal receipts", "LCD panels", "SMS confirmations"],
+      "viewport": "Product rows as a transaction list; checkout as a PIN-pad flow that ends in a printed receipt.",
+      "case": "Familiar surface, next-generation form; the daily money ritual becomes the store.",
+      "risk": "Too familiar — must feel like a system, not an app clone."
+    },
+    {
+      "id": "teletext",
+      "label": "Teletext Service",
+      "lineage": "broadcast teletext magazines",
+      "thesis": "The catalog as a broadcast index: pages, not sections; prices as cyan figures on a fixed 40×24 grid.",
+      "palette": ["#000000", "#ffffff", "#ffff00", "#00ffff", "#ff0000"],
+      "materials": ["fixed cell lattice", "double-height headers", "block-mosaic graphics"],
+      "viewport": "A page-address header, numbered product pages, a cyan flash-sale countdown, REVEAL for return-policy detail.",
+      "case": "Fuses cleanly: catalog pages, subpage carousels, REVEAL for fine print — but reads vintage.",
+      "risk": "Retro nostalgia where the brief says extreme-modern; product photos fight a bitmap grid."
+    },
+    {
+      "id": "type-specimen",
+      "label": "Type Specimen",
+      "lineage": "interactive variable-font specimens",
+      "thesis": "Products as glyphs on foundry paper: one axis slider morphs the whole catalog grid.",
+      "palette": ["#f6f4ef", "#111111", "#e02020"],
+      "materials": ["foundry paper", "ink", "axis sliders"],
+      "viewport": "A single giant product wordmark; a weight slider drives the entire grid of cards beneath it.",
+      "case": "Strong typographic hierarchy, but the white-paper register drifts toward the incumbent's quiet luxury.",
+      "risk": "Feels like a type foundry showcase, not a place to buy."
+    },
+    {
+      "id": "command-center",
+      "label": "Command Center",
+      "lineage": "mecha-crisis operator walls",
+      "thesis": "Flash sales as seven-segment countdowns; seller and admin dashboards as command consoles.",
+      "palette": ["#000000", "#ff7a00", "#b7ff00", "#ff0000"],
+      "materials": ["phosphor glow", "hazard chevrons", "seven-segment displays"],
+      "viewport": "A black wall with a monumental seven-segment countdown, framed status blocks, hazard bands at the edges.",
+      "case": "Countdown and console grammar fuses with flash sales and dashboards, but crisis chrome fights trust-first calm.",
+      "risk": "Overstimulating — urgency must stay event-driven, never constant."
+    },
+    {
+      "id": "cricket-scoreboard",
+      "label": "Cricket Scoreboard",
+      "lineage": "live cricket broadcast graphics",
+      "thesis": "The storefront as a live scorecard: every offer an over, every order an innings.",
+      "palette": ["#06100b", "#e8f5e9", "#ffd600", "#00c853"],
+      "materials": ["DRS graphics", "innings digits", "bottom-thirds"],
+      "viewport": "A persistent score strip of live deals; product rows as innings cards with running tallies.",
+      "case": "A national screen ritual everyone reads instantly; urgency maps to powerplays.",
+      "risk": "Sporty energy may undercut trust for sellers and payments."
+    },
+    {
+      "id": "metro-signage",
+      "label": "Metro Signage",
+      "lineage": "Dhaka Metro wayfinding systems",
+      "thesis": "The storefront as a station network: categories are lines, products are stops on the board.",
+      "palette": ["#101418", "#f4f4f2", "#d32f2f", "#2e7d32", "#1565c0"],
+      "materials": ["dot-matrix displays", "pylon signs", "line diagrams"],
+      "viewport": "A line-diagram category rail; product listings styled as a departure board with clear routes.",
+      "case": "Modern public infrastructure the city is proud of; navigation becomes wayfinding.",
+      "risk": "The transit metaphor can obscure the commercial task."
+    },
+    {
+      "id": "courier-sort",
+      "label": "Courier Sort",
+      "lineage": "waybills and parcel sorting lines",
+      "thesis": "Delivery is the product: every order a tracked waybill moving down the sort line.",
+      "palette": ["#faf9f6", "#16181d", "#0066ff", "#ff6b00"],
+      "materials": ["thermal labels", "barcodes", "sort bins", "manifest lists"],
+      "viewport": "A sort-line of order cards, barcode ribbons, and a live tracking manifest beneath each product.",
+      "case": "Makes the delivery promise physically legible — the marketplace's core proof.",
+      "risk": "Density can read administrative, not inviting."
+    },
+    {
+      "id": "load-shed-board",
+      "label": "Load-Shed Board",
+      "lineage": "utility schedule boards and public notice grids",
+      "thesis": "Availability made legible like a power grid: honest schedules, posted windows, stamped statuses.",
+      "palette": ["#f2efe8", "#141414", "#e02020", "#ffb000"],
+      "materials": ["mimeo grids", "rubber stamps", "mono tables"],
+      "viewport": "A stamped schedule grid: stock, delivery, and payout windows posted like utility notices.",
+      "case": "Public-information honesty the whole country reads; trust through posted schedules.",
+      "risk": "Outage associations may read negative for a trust-first brand."
+    },
+    {
+      "id": "atm-terminal",
+      "label": "ATM Terminal",
+      "lineage": "banking ATMs",
+      "thesis": "Self-service banking for the whole store: every step a secure terminal, every action audited.",
+      "palette": ["#101418", "#0b6bff", "#e8e8e4", "#00a676"],
+      "materials": ["function keys", "LCD panels", "receipt printers", "secure prompts"],
+      "viewport": "A function-key column, an LCD panel of products, checkout as a receipt-strip transaction.",
+      "case": "Bank-grade trust vocabulary; balances, limits, and confirmations feel settled.",
+      "risk": "Cold and institutional — the market's warmth must come through copy and motion."
+    },
+    {
+      "id": "blueprint",
+      "label": "Blueprint",
+      "lineage": "technical drawings and spec sheets",
+      "thesis": "The marketplace as a dimensioned spec: nothing unverified, every claim drawn to scale.",
+      "palette": ["#f5f3ec", "#1440b0", "#e02020", "#141414"],
+      "materials": ["grid paper", "dimension lines", "section marks", "title blocks"],
+      "viewport": "A title-block masthead, dimensioned product cards, section-marked category zones.",
+      "case": "Structure made literal: verified dimensions, callouts, and revision history as trust cues.",
+      "risk": "Schematic coldness — photography must stay desirable inside the frames."
+    },
+    {
+      "id": "cli-terminal",
+      "label": "CLI Terminal",
+      "lineage": "command-line interfaces",
+      "thesis": "The store as a fast terminal: every action a typed, confirmed command.",
+      "palette": ["#0a0e0a", "#33ff66", "#e8e8e4", "#ffb000"],
+      "materials": ["monospace", "prompt lines", "cursor", "ASCII rules"],
+      "viewport": "A prompt bar, product lines like ls output, checkout as a confirm prompt with a history.",
+      "case": "Extreme structure and speed; power users feel it instantly.",
+      "risk": "Too technical for the mobile majority — needs a gentle mode that keeps the grammar."
+    },
+    {
+      "id": "control-room",
+      "label": "Control Room",
+      "lineage": "broadcast control rooms",
+      "thesis": "The marketplace as an aired operation: every state metered, every chart a live waveform.",
+      "palette": ["#111418", "#ffb000", "#00ff88", "#4a6bff"],
+      "materials": ["VU meters", "faders", "waveform displays", "rack rails"],
+      "viewport": "Metered status bars, scope-trace charts on dashboards, channel-strip navigation on the storefront.",
+      "case": "Operation-level visibility for sellers; live meters make stock and delivery states physical.",
+      "risk": "Machinery can obscure the simple act of buying."
+    },
+    {
+      "id": "sku-scanner",
+      "label": "SKU Scanner",
+      "lineage": "retail barcode scanning lanes",
+      "thesis": "SKU-level certainty: scan is search, cart, and verify in one laser line.",
+      "palette": ["#ffffff", "#111111", "#00c853", "#ff1744"],
+      "materials": ["laser crosshairs", "barcode ribbons", "beep confirmations"],
+      "viewport": "A scanning lane of product cards, laser-line hover states, beep-confirmed adds to cart.",
+      "case": "Exactness as the brand: every product addressable, every price machine-read.",
+      "risk": "Reads as warehouse ops unless the front feels like a shop."
+    },
+    {
+      "id": "scaffold-frame",
+      "label": "Scaffold Frame",
+      "lineage": "construction scaffolds and structural frames",
+      "thesis": "The marketplace as a building under honest construction: every load-bearing member visible.",
+      "palette": ["#1a1a1a", "#ffcc00", "#e02020", "#f0f0ec"],
+      "materials": ["steel tubing", "safety striping", "mesh", "tie-offs"],
+      "viewport": "A scaffold-grid catalog, a safety-banded flash sale, a 'built to spec' trust bar across the top.",
+      "case": "Extreme structure with visible engineering; progress and statuses read like a site board.",
+      "risk": "Rough texture may fight product photography — content zones need restraint."
+    }
+  ],
+  "reroll": false,
+  "canon": false,
+  "steer": true
+}
