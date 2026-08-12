@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-12T00:00:00Z",
+  "title": "Design System: ApnarDokan — Bento Market",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#FFFFFF", "tonalRamp": ["#0d0d0d", "#3d3d3d", "#6b6b6b", "#9a9a9a", "#c4c4c4", "#e6e6e6", "#f4f4f4", "#ffffff"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#0D0D0D", "tonalRamp": ["#000000", "#0d0d0d", "#1f1f1f", "#333333", "#4c4c4c", "#6b6b6b", "#8f8f8f", "#c9c9c9"] },
+      "lime-500": { "role": "primary", "displayName": "Electric Lime", "canonical": "#C6FF00", "tonalRamp": ["#475900", "#667f00", "#87ab00", "#a9d800", "#c6ff00", "#d7ff47", "#e3ff80", "#efffb8"] },
+      "lime-400": { "role": "primary", "displayName": "Lime Hover", "canonical": "#D7FF47", "tonalRamp": ["#475900", "#667f00", "#87ab00", "#a9d800", "#c6ff00", "#d7ff47", "#e3ff80", "#efffb8"] },
+      "lime-600": { "role": "primary", "displayName": "Lime Shadow", "canonical": "#A9D800", "tonalRamp": ["#475900", "#667f00", "#87ab00", "#a9d800", "#c6ff00", "#d7ff47", "#e3ff80", "#efffb8"] },
+      "lime-700": { "role": "primary", "displayName": "Olive Lime", "canonical": "#87AB00", "tonalRamp": ["#475900", "#667f00", "#87ab00", "#a9d800", "#c6ff00", "#d7ff47", "#e3ff80", "#efffb8"] },
+      "lime-800": { "role": "primary", "displayName": "Legible Lime", "canonical": "#667F00", "tonalRamp": ["#475900", "#667f00", "#87ab00", "#a9d800", "#c6ff00", "#d7ff47", "#e3ff80", "#efffb8"] },
+      "smoke-50": { "role": "neutral", "displayName": "Smoke Light", "canonical": "#FAFAF8", "tonalRamp": ["#dcdcd9", "#e3e3df", "#eaeae8", "#f0f0ee", "#f4f4f4", "#f8f8f6", "#fafaf8", "#ffffff"] },
+      "smoke-100": { "role": "neutral", "displayName": "Warm Smoke", "canonical": "#F4F4F4", "tonalRamp": ["#dcdcd9", "#e3e3df", "#eaeae8", "#f0f0ee", "#f4f4f4", "#f8f8f6", "#fafaf8", "#ffffff"] },
+      "smoke-200": { "role": "neutral", "displayName": "Smoke Deep", "canonical": "#EAEAE8", "tonalRamp": ["#dcdcd9", "#e3e3df", "#eaeae8", "#f0f0ee", "#f4f4f4", "#f8f8f6", "#fafaf8", "#ffffff"] },
+      "success-700": { "role": "tertiary", "displayName": "Success", "canonical": "#15803D", "tonalRamp": ["#052e16", "#14532d", "#166534", "#15803d", "#16a34a", "#22c55e", "#4ade80", "#bbf7d0"] },
+      "danger-600": { "role": "tertiary", "displayName": "Danger", "canonical": "#DC2626", "tonalRamp": ["#450a0a", "#7f1d1d", "#991b1b", "#b91c1c", "#dc2626", "#ef4444", "#f87171", "#fecaca"] },
+      "info-700": { "role": "tertiary", "displayName": "Info", "canonical": "#1D4ED8", "tonalRamp": ["#172554", "#1e3a8a", "#1e40af", "#1d4ed8", "#2563eb", "#3b82f6", "#60a5fa", "#bfdbfe"] },
+      "console-900": { "role": "neutral", "displayName": "Console Black", "canonical": "#050506", "tonalRamp": ["#000000", "#050506", "#09090b", "#0e0e10", "#121214", "#161618", "#1c1c1e", "#26262a"] },
+      "console-800": { "role": "neutral", "displayName": "Console Panel", "canonical": "#060607", "tonalRamp": ["#000000", "#050506", "#060607", "#09090b", "#0e0e10", "#121214", "#161618", "#1c1c1e"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display — Unbounded", "purpose": "Hero headline, logo mark, section titles. Wide geometric retail-sign voice." },
+      "headline": { "displayName": "Headline — Unbounded", "purpose": "Section headings at 1.5–1.875rem." },
+      "body": { "displayName": "Body — Inter", "purpose": "Product copy, descriptions, form text. Max 65ch." },
+      "label": { "displayName": "Label — IBM Plex Mono", "purpose": "Prices, counts, stock, buttons, section links. Uppercase with wide tracking." }
+    },
+    "shadows": [
+      { "name": "card", "value": "0 1px 2px rgb(13 13 13 / 0.04), 0 8px 24px rgb(13 13 13 / 0.07)", "purpose": "Resting tiles, cards, chips." },
+      { "name": "hover", "value": "0 2px 4px rgb(13 13 13 / 0.06), 0 20px 44px rgb(13 13 13 / 0.14)", "purpose": "Lifted hover state — always paired with the spring lift." },
+      { "name": "overlay", "value": "0 24px 60px rgb(13 13 13 / 0.2)", "purpose": "Dropdowns, menus, floating panels." }
+    ],
+    "motion": [
+      { "name": "ease-spring", "value": "cubic-bezier(0.34, 1.56, 0.64, 1)", "purpose": "Hover lift (translateY -6px, scale 1.02), price pop, FLIP reflow, nav underline morph." },
+      { "name": "ease-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Reveals, entrances, magnetic reset." },
+      { "name": "flash-progress", "value": "3s linear infinite (width 0 → 100%)", "purpose": "Vendor carousel progress bar." },
+      { "name": "glow-low", "value": "1.6s ease-out infinite (spreading lime ring)", "purpose": "Flash module pulses when time runs low." },
+      { "name": "logo-morph", "value": "1.3s cubic-bezier(0.34, 1.56, 0.64, 1) both", "purpose": "Logo mark shape-shift on load." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (Electric Lime)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one CTA voice — lime fill, ink text, mono bold label.",
+      "html": "<button class=\"ds-btn-primary\">START SHOPPING</button>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; gap:8px; background:#C6FF00; color:#0D0D0D; font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:14px; font-weight:700; letter-spacing:.15em; padding:14px 24px; border-radius:8px; border:0; cursor:pointer; box-shadow:0 6px 24px rgb(198 255 0 / 0.35); transition:transform .45s cubic-bezier(.34,1.56,.64,1), background .2s; } .ds-btn-primary:hover { background:#D7FF47; transform:translateY(-2px) scale(1.02); } .ds-btn-primary:active { transform:scale(.98); } .ds-btn-primary:focus-visible { outline:2px solid #0D0D0D; outline-offset:2px; }"
+    },
+    {
+      "name": "Dark Button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Ink fill, lime text — secondary CTAs on light ground.",
+      "html": "<button class=\"ds-btn-dark\">SIGN UP</button>",
+      "css": ".ds-btn-dark { display:inline-flex; align-items:center; gap:8px; background:#0D0D0D; color:#C6FF00; font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:14px; font-weight:600; letter-spacing:.15em; padding:12px 20px; border-radius:8px; border:0; cursor:pointer; transition:transform .45s cubic-bezier(.34,1.56,.64,1), box-shadow .3s; } .ds-btn-dark:hover { transform:translateY(-2px) scale(1.02); box-shadow:0 12px 28px rgb(13 13 13 / .18); } .ds-btn-dark:focus-visible { outline:2px solid #C6FF00; outline-offset:2px; }"
+    },
+    {
+      "name": "Bento Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Ruled white tile with lime corner ticks — the board's registration mark.",
+      "html": "<div class=\"ds-card\"><strong>Trending</strong><span>৳12,400</span></div>",
+      "css": ".ds-card { position:relative; background:#FFFFFF; border:1px solid rgb(13 13 13 / .09); border-radius:16px; padding:20px; display:flex; flex-direction:column; gap:8px; box-shadow:0 1px 2px rgb(13 13 13 / .04), 0 8px 24px rgb(13 13 13 / .07); transition:transform .45s cubic-bezier(.34,1.56,.64,1), box-shadow .45s cubic-bezier(.34,1.56,.64,1), border-color .3s; } .ds-card::before, .ds-card::after { content:\"\"; position:absolute; width:9px; height:9px; border:1.5px solid #C6FF00; } .ds-card::before { top:-1px; left:-1px; border-right:0; border-bottom:0; border-radius:16px 0 0 0; } .ds-card::after { bottom:-1px; right:-1px; border-left:0; border-top:0; border-radius:0 0 16px 0; } .ds-card:hover { transform:translateY(-6px) scale(1.02); box-shadow:0 2px 4px rgb(13 13 13 / .06), 0 20px 44px rgb(13 13 13 / .14); border-color:rgb(166 200 0 / .5); } .ds-card strong { font-family:Inter,sans-serif; font-size:14px; font-weight:600; color:#0D0D0D; } .ds-card span { font-family:'IBM Plex Mono',monospace; font-size:14px; font-weight:700; color:#0D0D0D; }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Category filter chip — inverts to ink/lime when selected.",
+      "html": "<button class=\"ds-chip ds-chip-on\">ELECTRONICS</button>",
+      "css": ".ds-chip { display:inline-flex; align-items:center; gap:6px; background:#F4F4F4; color:#0D0D0D; border:1px solid rgb(13 13 13 / .09); border-radius:8px; padding:9px 14px; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:.08em; cursor:pointer; transition:all .3s; } .ds-chip:hover { border-color:#A9D800; color:#667F00; } .ds-chip-on { background:#0D0D0D; color:#C6FF00; border-color:#0D0D0D; box-shadow:0 1px 2px rgb(13 13 13 / .04), 0 8px 24px rgb(13 13 13 / .07); } .ds-chip:focus-visible { outline:2px solid #C6FF00; outline-offset:2px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Paper field with hairline-strong border; lime ring on focus.",
+      "html": "<input class=\"ds-input\" type=\"email\" placeholder=\"you@example.com\" />",
+      "css": ".ds-input { width:100%; box-sizing:border-box; background:#FFFFFF; color:#0D0D0D; border:1px solid rgb(13 13 13 / .18); border-radius:8px; padding:12px 16px; font-family:Inter,sans-serif; font-size:14px; transition:border-color .2s, box-shadow .2s; } .ds-input::placeholder { color:#5C5C5F; } .ds-input:focus { outline:0; border-color:#A9D800; box-shadow:0 0 0 3px rgb(198 255 0 / .3); }"
+    },
+    {
+      "name": "Nav Link (Morphing Underline)",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Nav link with a shared lime underline that slides between active states.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link ds-nav-on\" href=\"#\">Shop</a><a class=\"ds-nav-link\" href=\"#\">Flash Sale</a><span class=\"ds-nav-bar\"></span></nav>",
+      "css": ".ds-nav { position:relative; display:flex; gap:4px; } .ds-nav-link { position:relative; padding:9px 12px; border-radius:8px; color:#5C5C5F; font-family:Inter,sans-serif; font-size:14px; font-weight:500; text-decoration:none; transition:color .3s; } .ds-nav-link:hover { color:#0D0D0D; } .ds-nav-on { color:#0D0D0D; } .ds-nav-bar { position:absolute; left:60px; bottom:-2px; width:44px; height:3px; border-radius:99px; background:#C6FF00; box-shadow:0 0 8px rgb(198 255 0 / .8); transform:translateX(0) scaleX(1); transition:transform .5s cubic-bezier(.34,1.56,.64,1); }"
+    },
+    {
+      "name": "Seven-Segment Countdown Cell",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Segmented countdown digit — ink segments on paper, lime on ink tiles.",
+      "html": "<span class=\"ds-seg-cell\"><span class=\"ds-seg ds-seg-on\" style=\"top:0;left:18%;right:18%;height:16%\"></span><span class=\"ds-seg ds-seg-on\" style=\"top:17%;right:0;width:16%;height:33%\"></span><span class=\"ds-seg\" style=\"top:50%;right:0;width:16%;height:33%\"></span><span class=\"ds-seg\" style=\"bottom:0;left:18%;right:18%;height:16%\"></span><span class=\"ds-seg\" style=\"bottom:17%;left:0;width:16%;height:33%\"></span><span class=\"ds-seg\" style=\"top:17%;left:0;width:16%;height:33%\"></span><span class=\"ds-seg\" style=\"top:42%;left:18%;right:18%;height:16%\"></span></span>",
+      "css": ".ds-seg-cell { position:relative; display:inline-block; width:32px; aspect-ratio:3/5; background:#FFFFFF; border:1px solid rgb(13 13 13 / .09); border-radius:8px; padding:3px; box-sizing:border-box; } .ds-seg { position:absolute; background:#E5E5E4; transition:background .1s; clip-path:polygon(12% 0, 88% 0, 100% 50%, 88% 100%, 12% 100%, 0 50%); } .ds-seg-on { background:#0D0D0D; box-shadow:0 0 8px rgb(13 13 13 / .35); }"
+    },
+    {
+      "name": "Flash Sale Module (Glow-Low)",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Ink urgency module with black/lime chevron band; glows as time runs low.",
+      "html": "<div class=\"ds-flash\"><div class=\"ds-flash-band\"></div><h3>UP TO <span>70% OFF</span></h3><a href=\"#\">CLAIM A DEAL</a></div>",
+      "css": ".ds-flash { position:relative; overflow:hidden; background:#0D0D0D; color:#FFF; border-radius:16px; padding:28px; box-shadow:0 2px 4px rgb(13 13 13 / .06), 0 20px 44px rgb(13 13 13 / .14); animation:ds-glow 1.6s ease-out infinite; } @keyframes ds-glow { 0%,100% { box-shadow:0 0 0 0 rgb(198 255 0 / .55), 0 20px 44px rgb(13 13 13 / .14); } 50% { box-shadow:0 0 0 14px rgb(198 255 0 / 0), 0 20px 44px rgb(13 13 13 / .14); } } .ds-flash-band { position:absolute; top:0; left:0; right:0; height:6px; background:repeating-linear-gradient(-45deg, #0D0D0D 0 10px, #C6FF00 10px 20px); } .ds-flash h3 { font-family:Unbounded,sans-serif; font-weight:800; font-size:24px; letter-spacing:-.02em; } .ds-flash h3 span { color:#C6FF00; } .ds-flash a { display:inline-flex; gap:8px; margin-top:16px; background:#C6FF00; color:#0D0D0D; padding:12px 20px; border-radius:8px; font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:700; letter-spacing:.15em; text-decoration:none; transition:transform .45s cubic-bezier(.34,1.56,.64,1), background .2s; } .ds-flash a:hover { background:#D7FF47; transform:scale(1.03); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Electric Market Board",
+    "overview": "ApnarDokan's storefront is a bright, animated bento board — the marketplace as a living bulletin where what's trending is literally bigger, what's urgent glows, and every tile is a door into the catalog. The ground is white paper; the layout is asymmetric modular tiles of varying size that reflow with FLIP, lift with a spring on hover, and reveal themselves in staggered rises as you scroll. One electric lime accent carries all the energy — nothing else is allowed to compete with it. The world refuses the uniform card-grid bazaar and the dark operator-wall console that preceded it; it borrows the grammar of retail signage and editorial boards: bold display headlines, mono readouts, hairline rules, and color committed at the tile level.",
+    "keyCharacteristics": [
+      "White paper ground with bold ink type; one saturated accent (electric lime) at a time.",
+      "Bento tiles of varying size and color; 12–16px radii, never pills for panels.",
+      "Spring-physics hover (lift + scale 1.02 + shadow), FLIP reflow on filter, staggered rise reveals.",
+      "Mono readouts for prices, counts, and status labels; Unbounded display for headlines and the logo mark.",
+      "Role dashboards keep a separate dark console world via CSS-variable overrides."
+    ],
+    "rules": [
+      { "name": "The One-Accent Rule", "body": "Lime is the only saturated color on the white storefront. Red, green, and blue appear only as semantic status, never as decoration.", "section": "colors" },
+      { "name": "The Legible Lime Rule", "body": "Lime text on white never falls below #667F00. Bright lime appears only as fill (with ink text) or on ink tiles.", "section": "colors" },
+      { "name": "The Dual-Surface Rule", "body": "The storefront is light; the role dashboards are dark. Shared components read surface, line, muted, and foreground from CSS variables that DashboardShell overrides.", "section": "colors" },
+      { "name": "The Heading-Speaks Rule", "body": "No kicker or eyebrow above a heading. The heading carries its own weight; section context rides below it as muted copy.", "section": "typography" },
+      { "name": "The Spring Rule", "body": "Hover lift is translateY(-6px) scale(1.02) over cubic-bezier(0.34, 1.56, 0.64, 1). No other bounce or elastic easing anywhere; reveals use expo ease.", "section": "elevation" },
+      { "name": "The Flat-By-Default Rule", "body": "No shadows at rest beyond the ambient card shadow; elevation is earned by interaction, never worn as decoration.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do commit color at the tile level — one black tile, one lime tile, white tiles — rather than scattering lime accents over the page.",
+      "Do size bento tiles by what they mean: the trending category is bigger; the hero thesis is 2×2.",
+      "Do use mono readouts (Plex Mono) for every price, count, and status label.",
+      "Do keep lime text on white at #667F00 or darker, and reserve bright lime for fills and ink tiles.",
+      "Do reuse the spring curve only for the brief's lift/pop moments and expo ease for reveals."
+    ],
+    "donts": [
+      "Don't use a second saturated accent on the storefront — no orange, no purple, no teal.",
+      "Don't return to dark grounds or glowing phosphor effects on the storefront; darkness belongs to the role dashboards.",
+      "Don't put an eyebrow/kicker above a heading, or add section numbers that carry no information.",
+      "Don't animate width/left for the nav underline or progress bars — use transform.",
+      "Don't ship a uniform grid of identical cards where a bento board can say more about the data."
+    ]
+  }
+}
